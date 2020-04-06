@@ -5,18 +5,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Agregar usuario</h1>
-	
-	<form action="#" th:action="@{/agregarUsuario}" th:object="${usuario}" method="post">
-	    <p>
-	        Nombre: <input type="text" th:field="*{nombre}">
-	    </p>
-	    <p>
-	        Ocupacion: <input type="text" th:field="*{ocupacion}">
-	    </p>
-	    <p>
-	        <input type="submit" value="Enviar"/> <input type="reset" value="Borrar">
-	    </p>
-	</form>
+	<h1>Datos del usuario</h1>
+
+	<p th:text="'Nombre: ' + ${usuario.nombre}"></p>
+	<p th:text="'Ocupacion: ' + ${usuario.ocupacion}"></p>
+	<a href="/agregarUsuario">Regresar</a>
 </body>
 </html>
